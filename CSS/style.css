@@ -1,0 +1,329 @@
+:root{
+--dark:#19283f;
+--lighter:#253b5c;
+--light:#33d1cc;
+--secondry:#ff3150;
+--secondry2:#d62445;
+--secondry3:#ffc300;
+--iconic:#eff7fa;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+a:hover {
+    color: inherit;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+/* component */
+.main-btn{
+    background-color: var(--secondry);
+    border-color: var(--secondry);
+}
+.main-btn:hover {
+    background-color: var(--secondry2);
+    border-color: var(--secondry2);
+
+}
+.sec-btn{
+    border-color: transparent;
+    color: var(--dark);
+}
+.sec-btn:hover {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    color: white;
+
+}
+.special {
+    width: fit-content;
+    border-bottom: 1px solid var(--dark);
+}
+.special svg{
+    font-size: 50px;
+    color: var(--secondry);
+    margin-bottom: 5px;
+}
+/* component */
+/* Start nav */
+.navbar {
+    background-color: rgb(25, 40, 63 , 0.9);
+}
+.logo
+{   font-size: 35px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+    color: white
+}
+.navbar .nav-text{
+    color: white;
+    
+}
+.navbar .navbar-toggler{
+    color: white;
+    border-color: white;
+    box-shadow: none;
+}
+.navbar .navbar-toggler.active,
+.navbar .navbar-toggler:focus,
+.navbar .navbar-toggler:hover ,
+.navbar .navbar-toggler.active svg,
+.navbar .navbar-toggler:focus svg,
+.navbar .navbar-toggler:hover svg{
+    color: var(--light);
+}
+.navbar .navbar-toggler[aria-expanded="true"]
+{
+        border-color:var(--light);
+}
+.navbar .navbar-nav .nav-item .nav-link.active,
+.navbar .navbar-nav .nav-item .nav-link:focus,
+.navbar .navbar-nav .nav-item .nav-link:hover{
+    color: var(--light);
+
+    transition-duration: 0.3s;
+    transition-property: all;
+}
+.navbar .search  svg{
+    color: var(--light);
+    border-left: 2px solid var(--light);
+}
+
+/* landing */
+.landing{
+    position: relative;
+}
+.landing .hard-cover{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 1;
+    opacity: 65%;
+}
+.landing .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-80%);
+    color: white;
+    z-index: 2;
+    width: 80%;
+}
+/* landing */
+/* skills */
+.skills .card{
+    border: none;
+}
+.skills .icon-holder {
+    height:300px;
+}
+.skills .icon-holder .icon {
+    font-size: 50px;
+    color: var(--light);
+    left: 50%;
+    transform: translateX(-50%);
+}
+.skills .icon-holder .number {
+    font-size: 300px;
+    color: var(--iconic);
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* skills */
+.portfolio{
+    background-color: #f3f8fe;
+}
+.portfolio .buttons{
+display: flex;
+justify-content: center;
+}
+.portfolio .row .container .card{
+    position: relative;
+}
+.portfolio .row .card
+{
+    overflow: hidden;
+    border-color: transparent;
+}
+.portfolio .row .card .in-card{
+    position: absolute;
+    background-color: var(--dark);
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 0.6s;
+}
+.portfolio .row .card img {
+    transition-duration: 0.4s;
+}
+.portfolio .row .card:hover img {
+    filter: grayscale();
+}
+.portfolio .row .card:hover .in-card{
+    left: 0%;
+        z-index: 1;
+}
+.portfolio .get-more-btn
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: var(--dark);
+}
+
+/* Portfolio */
+/* About */
+.about .par1 h4 span{
+display: inline-block;
+padding: 0.25rem;
+border-bottom: 2px solid var(--dark);
+}
+.about .row2{
+    margin-top: 5rem;
+}
+.inner-container
+{
+    background-color: #f3f8fe;
+}
+.inner-container .inner-row
+{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.inner-container .inner-row .card{
+    border:none;
+    background-color:#f3f8fe ;
+    overflow: hidden;
+}
+.inner-container .inner-row .card h5 {
+background-color: var(--light);
+padding: 5px;
+color: white;
+opacity: 80%;
+position: relative;
+top: -5%;
+}
+.inner-container .inner-row .card .social-card{
+    width: 20%;
+    height: 45%;
+    background-color: rgb(25, 40, 63,80%);
+    position: absolute;
+    font-size: 30px;
+    justify-content: space-evenly;
+    z-index: 1;
+    color: white;
+    left: -20%;
+    transition-duration: 0.3s;
+}
+.inner-container .inner-row .card:hover .social-card{
+left:0%
+}
+.inner-container .inner-row .card .social-card svg:hover{
+    color:var(--light)
+}
+.inner-container .inner-row .card:hover img{
+    filter:blur(4px)
+}
+.about .row2 .main-btn {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.about .row2 .main-btn:hover {
+    background-color: var(--lighter);
+    border-color: var(--lighter);
+
+}
+/* About */
+/* Start */
+.start
+{
+    background-color: var(--dark);
+    color: white;
+}
+
+/* Start */
+/* Blog */
+.blog{
+    position: relative;
+}
+.blog .card-container a:hover{
+color: var(--secondry);
+}
+.blog .main-btn {
+    background-color: var(--dark);
+    border-color: var(--dark);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.blog .main-btn:hover {
+    background-color: var(--lighter);
+    border-color: var(--lighter);
+}
+/* Blog */
+/* Form */
+.form
+{
+    background-color: var(--light);
+    color: white;
+}
+.form #mail{
+    width: 25%;
+    border: none;
+    padding: 10px;
+    border-radius: 3px;
+}
+.form #mail:focus{
+    border: 1px solid var(--light);
+    outline: 1px solid var(--lighter);
+}
+.form .main-btn {
+    background-color: var(--dark);
+    border-color: var(--dark);
+}
+
+.form .main-btn:hover {
+    background-color: var(--lighter);
+    border-color: var(--lighter);
+}
+/* Form */
+/* Footer */
+footer{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: var(--dark);
+    color: white;
+}
+footer .logo{
+    font-size: 80px;
+    position: relative;
+    left: -1%;
+    
+}
+footer .icons {
+    font-size: 40px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+}
+footer .icons svg :hover{
+    color: var(--secondry);
+}
+footer .copyright svg{
+color: var(--secondry);
+}
+/* Footer */
